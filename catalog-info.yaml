@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: eniiff4qr-nodejs-gitops
+  description: This is GitOps manifest for eniiff4qr-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: eniiff4qr-nodejs
+    janus-idp.io/tekton: eniiff4qr-nodejs 
+    backstage.io/kubernetes-id: eniiff4qr-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:eniiff4qr-nodejs
